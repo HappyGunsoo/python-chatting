@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='/front/css/reset.css' rel='stylesheet'>
+    <link href='/front/css/style.css' rel='stylesheet'>
+    <script src="/front/vendor/fontawesome/js/all.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul class='tab-list'>
+                <li class='on' data-target-tab='friend-list'>
+                    <i class="fa-solid fa-user fa-lg"></i>
+                </li>
+                <li data-target-tab='chat-list'>
+                    <i class="fa-solid fa-comment fa-lg"></i>
+                </li>
+                <li data-target-tab='setting'>
+                    <i class="fa-solid fa-gear fa-lg"></i>
+                </li>
+            </ul>
+        </nav>
+        <main class='tab-item' data-tab-name='friend-list'>
+            <div class="tab-header">
+                <h1 class="title">친구</h1>
+                <div class="toolbox">
+                    <div class="btn btn-icon-circle btn-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="btn btn-icon-circle btn-add-friend">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-body">
+                <div class="row-user my-user">
+                    <div class="profile-picture" style='background-image: url(/front/public/img/jobs.jpg)'>
+                    </div>
+                    <div class="user-info">
+                        <div class="nickname">Steven Paul Jobs</div>
+                        <div class="desc">I Love IPhone Mini 😎</div>
+                    </div>
+                </div>
+                <hr>
+                <section>
+                    <div class="section-header">
+                        <div class="section-title">친구 240</div>
+                        <div class="toolbox">
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <div class="section-body friend-list">
+                        <div class="row-user">
+                            <div class="profile-picture" style='background-image: url(/front/public/img/jobs.jpg)'>
+                            </div>
+                            <div class="user-info">
+                                <div class="nickname">Steven Paul Jobs</div>
+                                <div class="desc">I Love IPhone Mini 😎</div>
+                            </div>
+                        </div>
+                        <div class="row-user">
+                            <div class="profile-picture" style='background-image: url(/front/public/img/jobs.jpg)'>
+                            </div>
+                            <div class="user-info">
+                                <div class="nickname">Steven Paul Jobs</div>
+                                <div class="desc">I Love IPhone Mini 😎</div>
+                            </div>
+                        </div>
+                        <div class="row-user">
+                            <div class="profile-picture" style='background-image: url(/front/public/img/jobs.jpg)'>
+                            </div>
+                            <div class="user-info">
+                                <div class="nickname">Steven Paul Jobs</div>
+                                <div class="desc">I Love IPhone Mini 😎</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <main class='tab-item blind' data-tab-name='chat-list'>
+            채팅 리스트입니다
+        </main>
+        <main class='tab-item blind' data-tab-name='setting'>
+            설정 리스트입니다
+        </main>
+
+        <div class='user-detail-card' style='background-image: url(/front/public/img/gradation.jpeg);'>
+            <div class="user-data">
+                <div class="profile-picture" style='background-image: url(/front/public/img/jobs.jpg)'></div>
+                <div class="nickname">Steven Paul Jobs</div>
+                <div class="desc">I Love IPhone Mini 😎</div>
+            </div>
+            <hr>
+            <div class="toolbox">
+                <div class="btn btn-new-chat">
+                    <i class="fa-solid fa-comment fa-xl"></i>
+                    <div class="label">1:1채팅</div>
+                </div>
+                <div class="btn btn-block">
+                    <i class="fa-solid fa-ban fa-xl"></i>
+                    <div class="label">차단</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='/front/script/main.js'></script>
+</body>
+
+</html>
