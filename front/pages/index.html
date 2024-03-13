@@ -38,8 +38,8 @@
                 </div>
             </div>
             <div class="tab-body">
-                <div class="row-user my-user">
-                    <div class="profile-picture" style='background-image: url(/front/public/img/jobs.jpg)'>
+                <div class="row-user">
+                    <div class="profile-picture lg" style='background-image: url(/front/public/img/jobs.jpg)'>
                     </div>
                     <div class="user-info">
                         <div class="nickname">Steven Paul Jobs</div>
@@ -51,10 +51,12 @@
                     <div class="section-header">
                         <div class="section-title">친구 240</div>
                         <div class="toolbox">
-                            <div class="arrow"></div>
+                            <div class="btn-arrow" data-slide-target='friend-list'>
+                                <div class="arrow"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="section-body friend-list">
+                    <div class="section-body friend-list open">
                         <div class="row-user">
                             <div class="profile-picture" style='background-image: url(/front/public/img/jobs.jpg)'>
                             </div>
@@ -106,6 +108,75 @@
                     <i class="fa-solid fa-ban fa-xl"></i>
                     <div class="label">차단</div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class='chatting-room-container'>
+        <div class="chatting-room-header">
+            <div class="chatting-room-data">
+                <div class="profile-picture" style='background-image: url(/front/public/img/jobs.jpg)'></div>
+                <div class="chatting-room-info">
+                    <div class="chatting-room-title">Steven Paul Jobs</div>
+                    <div class="chatting-room-cnt">
+                        <i class="fa-solid fa-user-large fa-xs"></i>
+                        <div class="cnt">1</div>
+                    </div>
+                </div>
+            </div>
+            <div class="toolbox">
+                <div class="btn btn-icon-circle btn-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="btn btn-icon-circle btn-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+        </div>
+        <div class="chatting-room-body">
+            <div class="msg-group send">
+                <div class="msg-list">
+                    <div class="msg-wrap">
+                        <div class="msg-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dolore nisi rem porro commodi! Eum laudantium libero earum sint tempora molestiae ut, nam debitis explicabo assumenda dicta odio. Cupiditate, quo.</div>
+                        <div class="time">오후 6:01</div>
+                    </div>
+                    <div class="msg-wrap">
+                        <div class="msg-text">Lorem, ipsum dolor.</div>
+                        <div class="time">오후 6:01</div>
+                    </div>
+                    <div class="msg-wrap">
+                        <div class="msg-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti!</div>
+                        <div class="time">오후 6:01</div>
+                    </div>
+                    <div class="msg-wrap">
+                        <div class="msg-text">헿헿헤</div>
+                        <div class="time">오후 6:01</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="msg-group receive">
+                <div class="profile-picture" style='background-image: url(/front/public/img/gradation.jpeg);'></div>
+                <div class="msg-list">
+                    <div class="msg-wrap">
+                        <div class="msg-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, obcaecati consequuntur, eligendi sint excepturi ipsum vero aut hic, dolor non nesciunt repellendus accusantium commodi corrupti eos quis iste itaque nam?</div>
+                        <div class="time">오후 6:01</div>
+                    </div>
+                    <div class="msg-wrap">
+                        <div class="msg-text">Lorem ipsum dolor sit amet consectetur.</div>
+                        <div class="time">오후 6:01</div>
+                    </div>
+                    <div class="msg-wrap">
+                        <div class="msg-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae odit est, similique tempora obcaecati nesciunt possimus perspiciatis quidem incidunt quis delectus aut veniam, porro rerum voluptatibus! Totam dolor a inventore.</div>
+                        <div class="time">오후 6:01</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chatting-room-footer">
+            <textarea class="ipt-chatting-msg" rows="4"></textarea>
+            <div class="toolbox">
+                <div class="btn-send">전송</div>
             </div>
         </div>
     </div>

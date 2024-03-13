@@ -1,3 +1,13 @@
+:root {
+  --color-light-primary: #cbdcf6;
+  --color-kakao: #FEE404;
+  --color-kakao-hover: #FADB03;
+}
+
+* {
+  word-break: break-word;
+}
+
 html,
 body {
   width: 100%;
@@ -10,6 +20,10 @@ body {
 
 h1 {
   color: #333333;
+}
+
+.btn {
+  cursor: pointer;
 }
 
 .btn-icon-circle {
@@ -38,10 +52,25 @@ h1 {
   transform: translate(-50%, -50%);
 }
 
+.profile-picture {
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  border-radius: 40%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.profile-picture.lg {
+  width: 50px;
+  height: 50px;
+}
+
 .container {
   display: flex;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   overflow: auto;
 }
 .container nav {
@@ -101,13 +130,28 @@ h1 {
   font-size: 1.3rem;
   color: #aeaeae;
 }
-.container main .tab-body section .section-header .toolbox .arrow {
+.container main .tab-body section .section-header .toolbox .btn-arrow {
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.container main .tab-body section .section-header .toolbox .btn-arrow .arrow {
   border: 1px solid #aeaeae;
   border-top: none;
   border-left: none;
   transform: rotate(45deg);
   width: 8px;
   height: 8px;
+}
+.container main .tab-body section .section-header .toolbox .btn-arrow.open {
+  transform: rotate(180deg);
+}
+.container main .tab-body section .section-body {
+  height: 0;
+  overflow: hidden;
+}
+.container main .tab-body section .section-body.open {
+  height: auto;
 }
 .container main .tab-body .row-user {
   display: flex;
@@ -116,20 +160,6 @@ h1 {
 }
 .container main .tab-body .row-user:hover {
   background: #f7f7f7;
-}
-.container main .tab-body .row-user.my-user .profile-picture {
-  width: 50px;
-  height: 50px;
-}
-.container main .tab-body .row-user .profile-picture {
-  flex-shrink: 0;
-  width: 45px;
-  height: 45px;
-  border-radius: 40%;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 .container main .tab-body .row-user .user-info {
   display: flex;
@@ -181,17 +211,6 @@ h1 {
   flex-direction: column;
   align-items: center;
 }
-.container .user-detail-card .user-data .profile-picture {
-  flex-shrink: 0;
-  width: 65px;
-  height: 65px;
-  border-radius: 40%;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-bottom: 1rem;
-}
 .container .user-detail-card .user-data .nickname {
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.568627451);
   font-size: 1.6rem;
@@ -213,6 +232,143 @@ h1 {
 }
 .container .user-detail-card .toolbox .btn .label {
   font-size: 1.2rem;
+}
+
+.chatting-room-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 100%;
+  max-width: 50%;
+  background: white;
+  box-shadow: 20px 0px 20px 20px rgba(0, 0, 0, 0.2196078431);
+  border-radius: 1rem 0 0 1rem;
+  background-color: var(--color-light-primary);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s;
+  transform: translateX(100%);
+}
+.chatting-room-container.open {
+  transform: translateX(0);
+}
+.chatting-room-container .chatting-room-header {
+  display: flex;
+  flex-shrink: 0;
+  padding: 1.5rem 1rem 1rem 2rem;
+  justify-content: space-between;
+  background-color: var(--color-light-primary);
+}
+.chatting-room-container .chatting-room-header .chatting-room-data {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.chatting-room-container .chatting-room-header .chatting-room-data .chatting-room-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.chatting-room-container .chatting-room-header .chatting-room-data .chatting-room-info .chatting-room-cnt {
+  display: flex;
+  gap: 0.5rem;
+  color: #555555;
+}
+.chatting-room-container .chatting-room-header .chatting-room-data .chatting-room-info .chatting-room-cnt .cnt {
+  font-size: 1.2rem;
+}
+.chatting-room-container .chatting-room-header .toolbox {
+  display: flex;
+  gap: 0.5rem;
+}
+.chatting-room-container .chatting-room-body {
+  flex-grow: 1;
+  padding: 0 2rem;
+  overflow: auto;
+}
+.chatting-room-container .chatting-room-body .msg-group {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: end;
+  gap: 1rem;
+}
+.chatting-room-container .chatting-room-body .msg-group.send {
+  justify-content: end;
+}
+.chatting-room-container .chatting-room-body .msg-group.send .msg-wrap {
+  justify-content: end;
+}
+.chatting-room-container .chatting-room-body .msg-group.send .msg-text {
+  background-color: var(--color-kakao);
+  order: 2;
+}
+.chatting-room-container .chatting-room-body .msg-group.send .time {
+  order: 1;
+}
+.chatting-room-container .chatting-room-body .msg-group.receive {
+  justify-content: start;
+}
+.chatting-room-container .chatting-room-body .msg-group.receive .profile-picture {
+  align-self: start;
+}
+.chatting-room-container .chatting-room-body .msg-group.receive .msg-text {
+  background-color: white;
+}
+.chatting-room-container .chatting-room-body .msg-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+}
+.chatting-room-container .chatting-room-body .msg-list .msg-wrap {
+  display: flex;
+  align-items: end;
+  gap: 0.5rem;
+}
+.chatting-room-container .chatting-room-body .msg-list .msg-wrap:last-child .time {
+  display: block;
+}
+.chatting-room-container .chatting-room-body .msg-list .msg-text {
+  padding: 1rem 1rem 0.7rem 1rem;
+  font-size: 1.4rem;
+  border-radius: 0.4rem;
+  width: fit-content;
+  line-height: 1.5;
+}
+.chatting-room-container .chatting-room-body .time {
+  display: none;
+  font-size: 1.2rem;
+  color: #666666;
+  width: 46px;
+  flex-shrink: 0;
+}
+.chatting-room-container .chatting-room-footer {
+  background: white;
+  padding: 1.2rem 1.5rem;
+  flex-shrink: 0;
+}
+.chatting-room-container .chatting-room-footer textarea.ipt-chatting-msg {
+  resize: none;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+.chatting-room-container .chatting-room-footer .toolbox {
+  display: flex;
+  justify-content: end;
+}
+.chatting-room-container .chatting-room-footer .toolbox .btn-send {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+  background-color: var(--color-kakao);
+  cursor: pointer;
+}
+.chatting-room-container .chatting-room-footer .toolbox .btn-send:hover {
+  background-color: var(--color-kakao-hover);
 }
 
 /*# sourceMappingURL=style.css.map */

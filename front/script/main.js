@@ -34,9 +34,10 @@ function setBtnEvt() {
                 document.removeEventListener('scroll', onScroll, true);
             }
 
-            function onClickOutside() {
-                console.log('onClickOutside');
-                closeUserDetailCard();
+            function onClickOutside(e) {
+                console.log(e.target)
+                if(e.target.closest('.btn-new-chat')) closeUserDetailCard();
+                if(!e.target.closest('.user-detail-card')) closeUserDetailCard();
             }
 
             function onScroll() {
@@ -51,6 +52,25 @@ function setBtnEvt() {
             document.addEventListener('scroll', onScroll, true);
         }
     });
+
+    $$('.btn-arrow').forEach(x => {
+        x.addEventListener('click', function() {
+            this.classList.toggle('open')
+            $(`.${this.dataset.slideTarget}`).classList.toggle('open')
+        })
+    })
+
+    $('.chatting-room-container .btn-close').addEventListener('click', function() {
+        this.closest('.chatting-room-container').classList.remove('open')
+    })
+
+    $('.user-detail-card .btn-new-chat').addEventListener('click', function() {
+        const chattingRoomContainerEl = $('.chatting-room-container')
+        const chattingRoomBodyEl = chattingRoomContainerEl.querySelector('.chatting-room-body')
+        chattingRoomContainerEl.classList.add('open')
+        chattingRoomBodyEl.scrollTop = chattingRoomBodyEl.scrollHeight
+        
+    })
 }
 function setOnScroll() {}
 
