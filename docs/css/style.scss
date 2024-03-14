@@ -78,6 +78,7 @@ h1 {
             li {
                 color: #999999;
                 padding: 1.25rem 1.75rem;
+                cursor: pointer;
                 &:first-child,
                 &:last-child {
                     padding: 2.5rem 1.75rem;
@@ -253,8 +254,8 @@ h1 {
     top: 0;
     right: 0;
     width: 500px;
+    max-width: 100%;
     height: 100%;
-    max-width: 50%;
     background: white;
     box-shadow: 20px 0px 20px 20px #00000038;
     border-radius: 1rem 0 0 1rem;
@@ -323,6 +324,7 @@ h1 {
                 }
                 .time {
                     order: 1;
+                    text-align: right;
                 }
             }
             &.receive {
@@ -365,7 +367,7 @@ h1 {
             display: none;
             font-size: 1.2rem;
             color: #666666;
-            width: 46px;
+            width: 60px;
             flex-shrink: 0;
         }
     }
@@ -382,6 +384,7 @@ h1 {
             outline: none;
             font-size: 1.3rem;
             margin-bottom: .5rem;
+            font-weight: 300;
         }
 
         .toolbox {
@@ -400,4 +403,8 @@ h1 {
             }
         }
     }
+}
+
+@media screan and (max-width: 500px) {
+
 }

@@ -78,7 +78,7 @@ function setOnScroll() {}
 function addUserRow() {
     let html = `
         <div class="row-user">
-            <div class="profile-picture" style='background-image: url(/front/public/img/jobs.jpg)'>
+            <div class="profile-picture" style='background-image: url(./public/img/jobs.jpg)'>
             </div>
             <div class="user-info">
                 <div class="nickname">Steven Paul Jobs</div>

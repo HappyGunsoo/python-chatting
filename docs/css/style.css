@@ -87,6 +87,7 @@ h1 {
 .container nav .tab-list li {
   color: #999999;
   padding: 1.25rem 1.75rem;
+  cursor: pointer;
 }
 .container nav .tab-list li:first-child, .container nav .tab-list li:last-child {
   padding: 2.5rem 1.75rem;
@@ -239,8 +240,8 @@ h1 {
   top: 0;
   right: 0;
   width: 500px;
+  max-width: 100%;
   height: 100%;
-  max-width: 50%;
   background: white;
   box-shadow: 20px 0px 20px 20px rgba(0, 0, 0, 0.2196078431);
   border-radius: 1rem 0 0 1rem;
@@ -305,6 +306,7 @@ h1 {
 }
 .chatting-room-container .chatting-room-body .msg-group.send .time {
   order: 1;
+  text-align: right;
 }
 .chatting-room-container .chatting-room-body .msg-group.receive {
   justify-content: start;
@@ -340,7 +342,7 @@ h1 {
   display: none;
   font-size: 1.2rem;
   color: #666666;
-  width: 46px;
+  width: 60px;
   flex-shrink: 0;
 }
 .chatting-room-container .chatting-room-footer {
@@ -355,6 +357,7 @@ h1 {
   outline: none;
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
+  font-weight: 300;
 }
 .chatting-room-container .chatting-room-footer .toolbox {
   display: flex;
