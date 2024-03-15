@@ -94,6 +94,8 @@ function init() {
     for (let i = 0; i < 100; i++) {
         addUserRow();
     }
+
+    $('.tab-list li:nth-child(2)').click();
 }
 
 init();
