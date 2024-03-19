@@ -1,0 +1,83 @@
+.container {
+  width: 100%;
+  max-width: 580px;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+}
+.container .logo-wrap {
+  width: 100%;
+  padding-top: 10rem;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+.container .login-form {
+  width: 100%;
+  padding: 5.5rem 8rem;
+  border: 1px solid #E0E0E0;
+}
+.container .login-form .row {
+  width: 100%;
+}
+.container .login-form .row-ipt-id {
+  margin-bottom: 1.5rem;
+}
+.container .login-form .row-ipt-pwd {
+  margin-bottom: 1rem;
+}
+.container .login-form .row-cb-info-memory {
+  text-align: left;
+  margin-bottom: 5rem;
+}
+.container .login-form .row-cb-info-memory label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+  color: #666666;
+}
+.container .login-form .row-btn-login {
+  margin-bottom: 1rem;
+}
+.container .login-form .row-btn-login .btn-login {
+  padding: 1rem 2rem;
+  background: #FEE502;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+.container .login-form .row-btn-login .btn-login:hover {
+  background: #fada0a;
+}
+.container .login-form .row-navigation {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.container .login-form .row-navigation .btn {
+  cursor: pointer;
+}
+.container .login-form .row-navigation .right {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.form-control {
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  outline: none;
+  border: 2px solid #cccccc;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.form-control::-moz-placeholder {
+  color: #8e8e8e;
+}
+.form-control::placeholder {
+  color: #8e8e8e;
+}
+.form-control:focus {
+  border-color: black;
+}/*# sourceMappingURL=login.css.map */

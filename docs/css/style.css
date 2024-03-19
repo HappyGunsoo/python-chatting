@@ -405,6 +405,7 @@
   padding: 1rem 1rem 0.7rem 1rem;
   font-size: 1.4rem;
   border-radius: 0.4rem;
+  width: -moz-fit-content;
   width: fit-content;
   line-height: 1.5;
 }
@@ -442,6 +443,4 @@
 }
 .chatting-room-container .chatting-room-footer .toolbox .btn-send:hover {
   background-color: var(--color-kakao-hover);
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,84 @@
+.container {
+    width: 100%;
+    max-width: 580px;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+
+    .logo-wrap {
+        width: 100%;
+        padding-top: 10rem;
+        font-weight: 700;
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+    .login-form {
+        width: 100%;
+        padding: 5.5rem 8rem;
+        border: 1px solid #E0E0E0;
+
+        .row {
+            width: 100%;
+        }
+        .row-ipt-id {
+            margin-bottom: 1.5rem;
+        }
+        .row-ipt-pwd {
+            margin-bottom: 1rem;
+        }
+        .row-cb-info-memory {
+            text-align: left;
+            margin-bottom: 5rem;
+            label {
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+                font-size: 1.4rem;
+                color: #666666;
+            }
+        }
+        .row-btn-login {
+            margin-bottom: 1rem;
+            .btn-login {
+                padding: 1rem 2rem;
+                background: #FEE502;
+                border-radius: .3rem;
+                cursor: pointer;
+                &:hover {
+                    background: #fada0a;
+                }  
+            }
+        }
+        .row-navigation {
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            .btn {
+                cursor: pointer;
+            }
+            .right {
+                display: flex;
+                gap: .5rem;
+            }
+        }
+
+    }
+}
+
+.form-control {
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    outline: none;
+    border: 2px solid #cccccc;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    
+    &::placeholder {
+        color: #8e8e8e;
+    }
+    &:focus {
+        border-color: black;
+    }
+}

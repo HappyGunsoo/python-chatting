@@ -1,0 +1,58 @@
+.container {
+  width: 100%;
+  max-width: 580px;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+}
+.container .row-title {
+  width: 100%;
+  padding-top: 10rem;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+.container .login-form {
+  width: 100%;
+  padding: 5.5rem 8rem;
+  border: 1px solid #E0E0E0;
+}
+.container .login-form .row {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.container .login-form .row-ipt-pwd-check {
+  margin-bottom: 4rem;
+}
+.container .login-form .row-btn-join {
+  margin-bottom: 1rem;
+}
+.container .login-form .row-btn-join .btn-join {
+  padding: 1rem 2rem;
+  background: #FEE502;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+.container .login-form .row-btn-join .btn-join:hover {
+  background: #fada0a;
+}
+
+.form-control {
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  outline: none;
+  border: 2px solid #cccccc;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.form-control::-moz-placeholder {
+  color: #8e8e8e;
+}
+.form-control::placeholder {
+  color: #8e8e8e;
+}
+.form-control:focus {
+  border-color: black;
+}/*# sourceMappingURL=join.css.map */
